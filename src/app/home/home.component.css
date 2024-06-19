@@ -12,9 +12,9 @@
     font-style: italic;
     color: #fff;
     font-weight: bold;
-    font-size: 4rem;
-    width: 20rem;
-    height: 20rem;
+    font-size: 5rem;
+    width: 25rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,9 +24,13 @@
     position: relative;
 }
 
+.title {
+    margin: 0;
+}
+
 .link {
     position: absolute;
-    top: 58%;
+    top: 60%; 
     left: 50%;
     transform: translateX(-50%);
     width: 40px;

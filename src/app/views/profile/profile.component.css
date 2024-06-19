@@ -1,0 +1,44 @@
+.container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #333;
+    height: 100vh;
+}
+
+.pulse-line {
+    width: 64px;
+    height: 1px;
+    margin: 2rem 4rem;
+    background-color: #eee;
+    border: none;
+    border-radius: 0.25rem;
+    animation: pulse 1.5s infinite;
+}
+
+.profile-picture {
+    position: relative;
+    display: block;
+    width: 96px;
+    height: 96px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
