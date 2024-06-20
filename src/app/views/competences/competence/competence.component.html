@@ -1,8 +1,12 @@
 <div *ngIf="activeTab">
-    <h2>{{ activeTab.name }}</h2>
-    <p>{{ activeTab.content }}</p>
+  <h2>{{ activeTab.name }}</h2>
+  <p>{{ activeTab.title }}</p>
+  <div *ngFor="let section of activeTab.content.sections">
+    <h3>{{ section.title }}</h3>
+    <p>{{ section.description }}</p>
+    <a [href]="section.link">Lien</a>
   </div>
-  <div *ngIf="!activeTab">
-    Veuillez sélectionner une compétence.
-  </div>
-  
+</div>
+<div *ngIf="!activeTab">
+  Veuillez sélectionner une compétence.
+</div>

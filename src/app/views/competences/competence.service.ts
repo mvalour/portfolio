@@ -4,8 +4,16 @@ import { Observable } from 'rxjs';
 
 export interface Competence {
   name: string;
-  content: string;
+  title: string;
+  content: {
+    sections: {
+      title: string;
+      description: string;
+      link: string;
+    }[];
+  };
 }
+
 
 @Injectable({
   providedIn: 'root'

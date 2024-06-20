@@ -1,8 +1,8 @@
 [
   {
     "name": "Compétence 1",
+    "title": "Réaliser un développement d'application",
     "content": {
-      "title": "Réaliser un développement d'application",
       "sections": [
         {
           "title": "Développer des applications informatiques simples",
@@ -24,8 +24,8 @@
   },
   {
     "name": "Compétence 2",
+    "title": "Optimiser des applications informatiques",
     "content": {
-      "title": "Optimiser des applications informatiques",
       "sections": [
         {
           "title": "Appréhender et construire des algorithmes",
@@ -42,8 +42,8 @@
   },
   {
     "name": "Compétence 3",
+    "title": "Administrer des systèmes informatiques communicants complexes",
     "content": {
-      "title": "Administrer des systèmes informatiques communicants complexes",
       "sections": [
         {
           "title": "Installer et configurer un poste de travail",
@@ -65,8 +65,8 @@
   },
   {
     "name": "Compétence 4",
+    "title": "Gérer des données de l'information",
     "content": {
-      "title": "Gérer des données de l'information",
       "sections": [
         {
           "title": "Concevoir et mettre en place une base de données à partir d'un cahier des charges client",
@@ -83,8 +83,8 @@
   },
   {
     "name": "Compétence 5",
+    "title": "Conduire un projet",
     "content": {
-      "title": "Conduire un projet",
       "sections": [
         {
           "title": "Identifier les besoins métiers des clients et des utilisateurs",
@@ -101,8 +101,8 @@
   },
   {
     "name": "Compétence 6",
+    "title": "Travailler dans une équipe informatique",
     "content": {
-      "title": "Travailler dans une équipe informatique",
       "sections": [
         {
           "title": "Identifier ses aptitudes pour travailler dans une équipe",
