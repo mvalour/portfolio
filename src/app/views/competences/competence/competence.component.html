@@ -1,12 +1,21 @@
-<div *ngIf="activeTab">
-  <h2>{{ activeTab.name }}</h2>
-  <p>{{ activeTab.title }}</p>
-  <div *ngFor="let section of activeTab.content.sections">
-    <h3>{{ section.title }}</h3>
-    <p>{{ section.description }}</p>
-    <a [href]="section.link">Lien</a>
+<div *ngIf="activeTab" class="container">
+  <h2 class="section-name">{{ activeTab.name }}</h2>
+  <p class="section-title">{{ activeTab.title }}</p>
+  
+  <div *ngFor="let section of activeTab.content.sections; let i = index" class="hidden-section {{ i % 2 === 0 ? 'align-left' : 'align-right' }}">
+    <div *ngIf="i % 2 === 0" class="decoration-left"></div>
+    <div *ngIf="i % 2 !== 0" class="decoration-right"></div>
+    <h3 class="skill-title">{{ section.title }}</h3>
+    <p class="skill-description">{{ section.description }}</p>
+    <a [href]="section.link" class="learn-more-link">Lien
+      <svg class="arrow-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+      </svg>
+    </a>
   </div>
+
 </div>
-<div *ngIf="!activeTab">
-  Veuillez sélectionner une compétence.
+
+<div *ngIf="!activeTab" class="container">
+  <p>Veuillez sélectionner une compétence.</p>
 </div>

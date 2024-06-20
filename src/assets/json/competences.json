@@ -7,17 +7,17 @@
         {
           "title": "Développer des applications informatiques simples",
           "description": "Au cours de la première année de mon programme en BUT, j'ai acquis des compétences dans la conception d'applications simples, en mettant particulièrement l'accent sur leur indépendance en excluant l'utilisation de bases de données et en adoptant des sites web statiques. Cette étape s'est avérée cruciale pour établir les fondements de la gestion de projet. En évitant de me perdre parmi les multiples choix technologiques et structurels, j'ai eu l'occasion d'explorer la conception d'applications. Le bénéfice d'avoir un sujet préalablement défini s'est révélé être un atout majeur, me permettant de me concentrer pleinement sur la programmation dès mes débuts dans la réalisation d'applications. Les langages que j'ai étudiés m'ont ouvert un large éventail de possibilités, me guidant de la création d'applications en lignes de commandes à l'élaboration d'interfaces graphiques, tout en passant par le développement de sites web statiques.",
-          "link": "./profile.php"
+          "link": "./profile"
         },
         {
           "title": "Partir des exigences et aller jusqu'à une application complète",
           "description": "Cette seconde phase de ma formation représente une avancée majeure. Au-delà de mon rôle initial de créateur d'applications, je me trouve désormais dans la position de concepteur. Mon apprentissage m'a permis d'anticiper et de planifier l'ensemble du processus de développement avant de donner vie à mes idées. Cela m'a amené à réfléchir profondément à la structure du code et à adopter des pratiques de conception optimales. Les domaines passionnants des architectures logicielles et des designs patterns sont devenus des éléments cruciaux de ma démarche créative. Intégrer cette dimension de conception à mes compétences en développement, acquises lors de ma première année, a engendré une véritable montée en compétence, reflétée dans la qualité et l'ambition croissantes de mes projets au fil des semestres.",
-          "link": "./profile.php"
+          "link": "./profile"
         },
         {
           "title": "Adapter des applications sur un ensemble de supports",
           "description": "Au cours de ma deuxième année en BUT Informatique, j'ai approfondi mes compétences en adaptant des applications sur un éventail de supports variés, tels que les dispositifs embarqués, le web, les applications mobiles et l'Internet des objets (IoT). Cette phase de ma formation m'a permis de relever des défis passionnants liés à la diversité des plateformes. J'ai appris à concevoir des solutions flexibles, capables de s'ajuster harmonieusement aux exigences spécifiques de chaque support, notamment avec le besoin de créer des applications ou sites web responsifs. En explorant ces différentes facettes, j'ai affiné ma compréhension des architectures logicielles et des méthodes de développement multiplateformes. La nécessité d'adapter les applications à ces divers environnements a renforcé ma capacité à anticiper les besoins et à optimiser la performance, marquant ainsi une évolution significative dans ma démarche de développement. Cette expérience enrichissante a contribué à diversifier mes compétences et à approfondir ma compréhension des enjeux contemporains dans le domaine de l'informatique.",
-          "link": "./profile.php"
+          "link": "./profile"
         }
       ]
     }
@@ -30,12 +30,12 @@
         {
           "title": "Appréhender et construire des algorithmes",
           "description": "La création d'algorithmes, souvent sous-estimée pour sa complexité, s'avère de plus en plus exigeante à mesure que les problèmes à résoudre gagnent en intricacité. Au cours de ma première année en BUT Informatique, nous avons exploré cette discipline en apprenant à structurer nos raisonnements, facilitant ainsi la transposition de nos idées en algorithmes. De la résolution de problèmes élémentaires au développement d'algorithmes plus sophistiqués, nous avons également plongé dans la conception et l'utilisation de structures de données pour simplifier nos implémentations. En parallèle, l'analyse comparative des méthodes nous a permis d'évaluer la performance relative de divers algorithmes, enrichissant ainsi notre compréhension de cette discipline cruciale en informatique.",
-          "link": "./profile.php"
+          "link": "./profile"
         },
         {
           "title": "Sélectionner les algorithmes adéquats pour répondre à un problème donné",
           "description": "Au cours de ma deuxième année, notre exploration approfondie des algorithmes s'est intensifiée, ajoutant une dimension théorique précieuse pour guider nos choix d'implémentation. Grâce à des cours portant sur les probabilités et les fondements de la cryptographie, nous avons élargi notre palette d'outils, nous permettant d'évaluer judicieusement les avantages et les inconvénients de chaque approche d'implémentation. Les enseignements en architecture des réseaux ont également enrichi notre compréhension des interactions entre machines communicantes, nous offrant une vision plus claire pour adapter nos algorithmes aux contraintes physiques et matérielles spécifiques aux réseaux. En parallèle, nous avons exploré de nouveaux langages de programmation tels que JavaScript et PHP. Chaque langage, avec sa propre syntaxe et ses outils distincts, nous a poussés à nous adapter pour exploiter au mieux leurs possibilités, en tenant compte de leurs caractéristiques uniques.",
-          "link": "./profile.php"
+          "link": "./profile"
         }
       ]
     }
@@ -48,17 +48,17 @@
         {
           "title": "Installer et configurer un poste de travail",
           "description": "",
-          "link": "./profile.php"
+          "link": "./profile"
         },
         {
           "title": "Déployer des services dans une architecture réseau",
           "description": "",
-          "link": "./profile.php"
+          "link": "./profile"
         },
         {
           "title": "Faire évoluer et maintenir un système informatique communicant en conditions opérationnelles",
           "description": "",
-          "link": "./profile.php"
+          "link": "./profile"
         }
       ]
     }
@@ -71,12 +71,12 @@
         {
           "title": "Concevoir et mettre en place une base de données à partir d'un cahier des charges client",
           "description": "Dans tout processus informatique, qu'il s'agisse de développement d'applications ou de gestion de données, l'information et les données jouent un rôle central. Les applications, quelle que soit leur forme, manipulent des données pour effectuer divers traitements. Ainsi, le stockage de ces données représente un aspect aussi essentiel que le développement des applications dans le contexte des projets informatiques. Pour maîtriser cet enjeu, nous avons entrepris des cours destinés à explorer ce domaine spécifique, nous dotant ainsi des compétences nécessaires pour créer des bases de données et les utiliser de manière efficace. Dans notre apprentissage, la première étape a consisté à se familiariser avec le langage SQL, un outil incontournable permettant d'effectuer des requêtes et de visualiser le contenu des bases de données. Parallèlement, nous avons pris en main le système de gestion de bases de données Oracle, une étape cruciale dans la création de nos premières bases de données. De plus, nous avons acquis la compétence de modéliser des concepts de données, une démarche indispensable pour représenter les liens entre les différentes données que nous devions traiter. Cette approche nous a guidés dans la création de bases de données conformes aux cahiers des charges, décrivant les situations nécessitant une base de données spécifique. En résumé, cette formation nous a fourni les compétences essentielles pour aborder avec succès la gestion et l'optimisation de l'information au sein des projets informatiques.",
-            "link": "./profile.php"
+            "link": "./profile"
         },
         {
           "title": "Optimiser une base de données, intéragir avec une application et mettre en œuvre la sécurité",
           "description": "Au cours du troisième semestre du BUT, nous avons approfondi notre compréhension des bases de données en les intégrant plus étroitement à nos applications. Cette démarche a été marquée par l'apprentissage de la connexion entre Oracle et des langages comme PHP, élargissant notre capacité à effectuer des requêtes SQL. Ainsi, nous avons pu créer des applications dynamiques, introduisant un niveau d'interaction et de modification de contenu en temps réel. En parallèle, une exploration approfondie du fonctionnement des systèmes de gestion de bases de données a été entreprise. L'accent a été mis sur l'optimisation des requêtes pour améliorer les performances. La sécurité a également été une préoccupation majeure, nous conférant la responsabilité de garantir le stockage sûr des données, conformément à des réglementations telles que le RGPD européen. Ce semestre a donc renforcé nos compétences dans la gestion avancée des bases de données, nous préparant ainsi à relever des défis plus complexes dans notre parcours en informatique.",
-          "link": "./profile.php"
+          "link": "./profile"
         }
       ]
     }
@@ -89,12 +89,12 @@
         {
           "title": "Identifier les besoins métiers des clients et des utilisateurs",
           "description": "Au cours de notre parcours, nous avons développé des compétences approfondies en identification des besoins métiers des clients et des utilisateurs. Cette démarche complexe inclut la compréhension des enjeux et des contraintes du projet, ainsi que la définition précise des objectifs à atteindre. Nous avons perfectionné notre capacité d'écoute attentive pour comprendre les demandes des clients et des utilisateurs, les interroger de manière approfondie afin de mieux saisir leurs besoins et attentes, et reformuler ces informations de manière claire et concise. Simultanément, nous avons affiné nos compétences d'analyse des données et des documents disponibles pour une meilleure appréhension du contexte global du projet. De manière complémentaire, nous avons acquis l'aptitude à formaliser rigoureusement les besoins métiers à travers des spécifications fonctionnelles. Ces documents détaillés, décrivant les fonctionnalités et les caractéristiques du logiciel ou de l'application à développer, se révèlent être des outils clés pour la réalisation de projets. Ils nous permettent de définir clairement les livrables attendus tout en garantissant la satisfaction des attentes du client et des utilisateurs. Ainsi, ce processus holistique, intégrant écoute, analyse et formalisation, représente une base solide pour une collaboration fructueuse entre le développement informatique et les besoins réels des utilisateurs.",
-            "link": "./profile.php"
+            "link": "./profile"
         },
         {
           "title": "Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs",
           "description": "Au cours de notre parcours en BUT Informatique, nous avons développé une approche de suivi de projet centrée sur les besoins métiers des clients et des utilisateurs. Cette démarche intègre la mise en œuvre de méthodes et d'outils visant à assurer l'atteinte des objectifs définis. Nous avons acquis la compétence d'élaborer des plannings et des budgets prévisionnels, de suivre l'évolution du projet en utilisant des indicateurs de performance, et d'ajuster les plans en cours de réalisation à l'aide d'outils tels que le tableau de bord. Au même moment, nous avons perfectionné nos compétences en communication, facilitant une transmission claire et précise des informations sur l'avancement du projet et la résolution éventuelle de difficultés rencontrées à tous les intervenants, qu'il s'agisse du client, de l'équipe interne ou de prestataires externes. Ainsi, cette approche intégrée du suivi de projet, acquise tout au long de notre formation, se positionne comme un atout essentiel pour relever avec succès les défis complexes et en constante évolution du domaine informatique.",
-          "link": "./profile.php"
+          "link": "./profile"
         }
       ]
     }
@@ -107,17 +107,17 @@
         {
           "title": "Identifier ses aptitudes pour travailler dans une équipe",
           "description": "",
-            "link": "./profile.php"
+            "link": "./profile"
         },
         {
           "title": "Situer son rôle et ses missions au sein d'un équipe informatique",
           "description": "",
-          "link": "./profile.php"
+          "link": "./profile"
         },
         {
           "title": "Manager une équipe informatique",
           "description": "",
-            "link": "./profile.php"
+            "link": "./profile"
         }
       ]
     }
