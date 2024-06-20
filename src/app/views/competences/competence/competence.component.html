@@ -1,0 +1,8 @@
+<div *ngIf="activeTab">
+    <h2>{{ activeTab.name }}</h2>
+    <p>{{ activeTab.content }}</p>
+  </div>
+  <div *ngIf="!activeTab">
+    Veuillez sélectionner une compétence.
+  </div>
+  
