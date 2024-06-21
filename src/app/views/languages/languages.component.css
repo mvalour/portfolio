@@ -1,0 +1,62 @@
+.languages {
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #0056b3;
+}
+
+.filter-button.active {
+    background-color: #0056b3;
+}
+
+.language-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.language-card {
+    width: 300px;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.language-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.language-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.language-card p {
+    font-size: 14px;
+    color: #666;
+}

@@ -1,0 +1,110 @@
+[
+    {
+        "name": "HTML",
+        "type": "frontend",
+        "image": "../../../assets/img/languages/html.png",
+        "description": "Langage de balisage utilisé pour structurer le contenu web."
+    },
+    {
+        "name": "CSS",
+        "type": "frontend",
+        "image": "../../../assets/img/languages/css.png",
+        "description": "Langage de style utilisé pour la présentation des pages web."
+    },
+    {
+        "name": "JavaScript",
+        "type": "frontend",
+        "image": "../../../assets/img/languages/js.png",
+        "description": "Langage de programmation utilisé pour rendre les pages web interactives."
+    },
+    {
+        "name": "Python",
+        "type": "backend",
+        "image": "../../../assets/img/languages/python.png",
+        "description": "Langage de programmation polyvalent utilisé pour le développement backend."
+    },
+    {
+        "name": "SQL",
+        "type": "database",
+        "image": "../../../assets/img/languages/sql.png",
+        "description": "Langage de requête structuré utilisé pour gérer les bases de données relationnelles."
+    },
+    {
+        "name": "PHP",
+        "type": "backend",
+        "image": "../../../assets/img/languages/php.png",
+        "description": "Langage de script principalement utilisé pour le développement web côté serveur."
+    },
+    {
+        "name": "Node.js",
+        "type": "backend",
+        "image": "../../../assets/img/languages/nodejs.png",
+        "description": "Plateforme permettant d'exécuter du code JavaScript côté serveur."
+    },
+    {
+        "name": "NestJS",
+        "type": "backend",
+        "image": "../../../assets/img/languages/nestjs.png",
+        "description": "Cadre de développement pour construire des applications efficaces et évolutives sur Node.js."
+    },
+    {
+        "name": "Angular",
+        "type": "frontend",
+        "image": "../../../assets/img/languages/angular.png",
+        "description": "Plateforme et framework de développement pour créer des applications web dynamiques."
+    },
+    {
+        "name": "C",
+        "type": "backend",
+        "image": "../../../assets/img/languages/c.png",
+        "description": "Langage de programmation procédural utilisé pour le développement système et applicatif."
+    },
+    {
+        "name": "Java",
+        "type": "backend",
+        "image": "../../../assets/img/languages/java.png",
+        "description": "Langage de programmation orienté objet utilisé pour développer divers types d'applications."
+    },
+    {
+        "name": "Tailwind CSS",
+        "type": "frontend",
+        "image": "../../../assets/img/languages/tailwind.png",
+        "description": "Cadre CSS utilitaire pour créer rapidement des interfaces utilisateur personnalisées."
+    },
+    {
+        "name": "MySQL",
+        "type": "database",
+        "image": "../../../assets/img/languages/mysql.png",
+        "description": "Système de gestion de base de données relationnelles SQL populaire."
+    },
+    {
+        "name": "Docker",
+        "type": "backend",
+        "image": "../../../assets/img/languages/docker.png",
+        "description": "Plateforme de conteneurisation pour automatiser le déploiement d'applications."
+    },
+    {
+        "name": "GitHub",
+        "type": "backend",
+        "image": "assets/img/languages/languages/html.png",
+        "description": "Plateforme de développement collaboratif utilisant Git pour le contrôle de version."
+    },
+    {
+        "name": "Symfony",
+        "type": "backend",
+        "image": "../../../assets/img/languages/languages/symfony.png",
+        "description": "Cadre PHP utilisé pour développer des applications web robustes et évolutives."
+    },
+    {
+        "name": "Vue.js",
+        "type": "frontend",
+        "image": "../../../assets/img/languages/vuejs.png",
+        "description": "Framework JavaScript progressif utilisé pour construire des interfaces utilisateur interactives."
+    },
+    {
+        "name": "MongoDB",
+        "type": "database",
+        "image": "../../../assets/img/languages/mongodb.png",
+        "description": "Système de gestion de base de données NoSQL orienté documents."
+    }
+]

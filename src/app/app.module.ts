@@ -13,6 +13,7 @@ import { ContactComponent } from './views/contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { CompetencesComponent } from './views/competences/competences.component';
 import { CompetenceComponent } from './views/competences/competence/competence.component';
+import { LanguagesComponent } from './views/languages/languages.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CompetenceComponent } from './views/competences/competence/competence.c
     HomeComponent,
     CompetencesComponent,
     CompetenceComponent,
+    LanguagesComponent,
   ],
   imports: [
     BrowserModule,
