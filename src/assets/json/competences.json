@@ -47,12 +47,12 @@
       "sections": [
         {
           "title": "Installer et configurer un poste de travail",
-          "description": "",
+          "description": "Pour un développeur, maîtriser à la fois le développement et l'optimisation des applications est primordial, mais connaître son matériel l'est tout autant. Comprendre les outils que nous utilisons et leur fonctionnement est crucial pour une vue globale de notre travail. Nous avons appris à identifier les composants d'un ordinateur et à les configurer pour travailler efficacement. Cela inclut la mise en place d'une machine virtuelle pour un contrôle total de l'environnement de travail. Nous avons également appris à utiliser les systèmes d'exploitation basés sur UNIX, comme Linux, ce qui nous a permis d'étudier divers environnements de développement.",
           "link": "./profile"
         },
         {
           "title": "Déployer des services dans une architecture réseau",
-          "description": "",
+          "description": "Les cours d’architecture des réseaux ont été une opportunité d'approfondir la communication entre applications/processus et les réseaux et nous ont permis de découvrir des concepts essentiels comme les serveurs DNS et DHCP, qui assurent le bon fonctionnement des réseaux modernes. En parallèle, les cours de programmation système nous ont permis d'explorer en détail, et au niveau le plus bas, la mise en place de ces communications inter-applications. Cette fois-ci, nous avons également intégré l'aspect sécurisation en introduisant les bases de la cryptographie, soulignant ainsi la responsabilité du développeur dans la sécurisation des communications.",
           "link": "./profile"
         },
         {

@@ -38,13 +38,13 @@
     {
         "name": "Node.js",
         "type": "backend",
-        "image": "../../../assets/img/languages/nodejs.png",
+        "image": "../../../assets/img/languages/nodeJS.png",
         "description": "Plateforme permettant d'exécuter du code JavaScript côté serveur."
     },
     {
         "name": "NestJS",
         "type": "backend",
-        "image": "../../../assets/img/languages/nestjs.png",
+        "image": "../../../assets/img/languages/nestJS.png",
         "description": "Cadre de développement pour construire des applications efficaces et évolutives sur Node.js."
     },
     {
@@ -79,26 +79,26 @@
     },
     {
         "name": "Docker",
-        "type": "backend",
+        "type": "tool",
         "image": "../../../assets/img/languages/docker.png",
         "description": "Plateforme de conteneurisation pour automatiser le déploiement d'applications."
     },
     {
         "name": "GitHub",
-        "type": "backend",
-        "image": "assets/img/languages/languages/html.png",
+        "type": "tool",
+        "image": "assets/img/languages/github.png",
         "description": "Plateforme de développement collaboratif utilisant Git pour le contrôle de version."
     },
     {
         "name": "Symfony",
         "type": "backend",
-        "image": "../../../assets/img/languages/languages/symfony.png",
+        "image": "../../../assets/img/languages/symfony.png",
         "description": "Cadre PHP utilisé pour développer des applications web robustes et évolutives."
     },
     {
         "name": "Vue.js",
         "type": "frontend",
-        "image": "../../../assets/img/languages/vuejs.png",
+        "image": "../../../assets/img/languages/vue.png",
         "description": "Framework JavaScript progressif utilisé pour construire des interfaces utilisateur interactives."
     },
     {

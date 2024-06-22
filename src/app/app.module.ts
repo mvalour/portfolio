@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { CompetencesComponent } from './views/competences/competences.component';
 import { CompetenceComponent } from './views/competences/competence/competence.component';
 import { LanguagesComponent } from './views/languages/languages.component';
+import { ProjectsComponent } from './views/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LanguagesComponent } from './views/languages/languages.component';
     CompetencesComponent,
     CompetenceComponent,
     LanguagesComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
