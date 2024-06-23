@@ -16,6 +16,7 @@ import { CompetenceComponent } from './views/competences/competence/competence.c
 import { LanguagesComponent } from './views/languages/languages.component';
 import { ProjectsComponent } from './views/projects/projects.component';
 import { ProjectCarouselComponent } from './views/projects/project-carousel/project-carousel.component';
+import { TimelineComponent } from './views/timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProjectCarouselComponent } from './views/projects/project-carousel/proj
     CompetenceComponent,
     LanguagesComponent,
     ProjectsComponent,
-    ProjectCarouselComponent
+    ProjectCarouselComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
