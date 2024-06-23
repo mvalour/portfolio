@@ -1,3 +1,7 @@
+.tab-container {
+    padding: 70px;
+}
+
 .tab-list {
     display: flex;
     list-style-type: none;
