@@ -1,0 +1,23 @@
+[
+    {
+      "title": "Annuaire en langage C",
+      "image": "../../../assets/img/projects/annuaire.png",
+      "description": "Structuration de données dans un annuaire"
+    },
+    {
+      "title": "Aide à la décision",
+      "image": "../../../assets/img/projects/graphe.png",
+      "description": "Projet JAVA d'aide à la décision de trajets optimisés"
+    },
+    {
+      "title": "Liste2courses",
+      "image": "../../../assets/img/projects/course.png",
+      "description": "Application web en Symfony, gestion de listes de courses"
+    },
+    {
+      "title": "myContest",
+      "image": "../../../assets/img/projects/mycontest.png",
+      "description": "Site de gestion et d'achat de places de tournois e-sport en ligne"
+    }
+]
+  
