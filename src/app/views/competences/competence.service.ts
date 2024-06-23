@@ -14,7 +14,6 @@ export interface Competence {
   };
 }
 
-
 @Injectable({
   providedIn: 'root'
 })
