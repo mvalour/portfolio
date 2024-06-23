@@ -1,0 +1,13 @@
+[
+    {
+      "title": "Pari quantitatif",
+      "image": "../../../assets/img/projects/pq.png",
+      "description": "Site de jeu de société en Angular"
+    },
+    {
+      "title": "Portfolio",
+      "image": "../../../assets/img/projects/portfolio.png",
+      "description": "Site web personnel, portfolio"
+    }
+]
+ 

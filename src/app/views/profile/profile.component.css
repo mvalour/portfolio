@@ -11,6 +11,7 @@
 }
 
 .pulse-line {
+    z-index: 1;
     width: 35%;
     height: 0px;
     background-color: #eee;
