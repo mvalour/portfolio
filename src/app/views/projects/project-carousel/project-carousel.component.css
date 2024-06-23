@@ -7,8 +7,8 @@
 .carousel {
     position: relative;
     margin: 0 auto;
-    width: 80%;
-    max-width: 800px;
+    width: 70%;
+    max-width: 600px;
     overflow: hidden;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .carousel-item {
-    min-width: 100%;
+    min-width: 90%;
     box-sizing: border-box;
     padding: 20px;
     background: #fff;
@@ -28,23 +28,23 @@
 }
 
 .carousel-item img {
-    width: 100%;
+    width: 70%;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
 }
 
 button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(172, 78, 190, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
+    font-size: 12px;
+    border-radius: 30%;
 }
 
 button.prev {
@@ -56,5 +56,5 @@ button.next {
 }
 
 button.prev:hover, button.next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(145, 5, 238, 0.8);
 }
