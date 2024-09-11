@@ -1,8 +1,8 @@
 .hidden-section {
     position: relative;
     margin-bottom: 20px;
-    padding-left: 30px; /* Espace pour le texte des paragraphes pairs */
-    padding-right: 30px; /* Espace pour le texte des paragraphes impairs */
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .hidden-section::before {
@@ -11,27 +11,23 @@
     top: 50%;
     width: 6px;
     height: 6px;
-    background-color: #2d3748; /* Couleur de la décoration */
+    background-color: #2d3748;
     border-radius: 50%;
     transform: translateY(-50%);
 }
 
-/* Décoration à gauche pour les paragraphes pairs */
 .hidden-section.align-left::before {
     left: -5px;
 }
 
-/* Décoration à droite pour les paragraphes impairs */
 .hidden-section.align-right::before {
     right: -5px;
 }
 
-/* Alignement du texte à gauche pour les paragraphes pairs */
 .hidden-section.align-left {
     text-align: left;
 }
 
-/* Alignement du texte à droite pour les paragraphes impairs */
 .hidden-section.align-right {
     text-align: right;
 }
