@@ -1,15 +1,74 @@
-<div class="tab-container">
-    <ul class="tab-list" role="tablist">
-        <li *ngFor="let tab of competences" role="presentation">
-            <button class="tab-button"
-                    [class.active]="tab === activeTab"
-                    (click)="onTabClick(tab)">
-                {{ tab.name }}
-            </button>
-        </li>
-    </ul>
-</div>
-<app-competence [activeTab]="activeTab"></app-competence>
-<div class="main">
-    <app-languages></app-languages>
-</div>
+<section class="competences">
+    <!-- Background Elements -->
+    <div class="competences-bg">
+        <div class="bg-gradient"></div>
+        <div class="bg-pattern"></div>
+        <div class="floating-elements">
+            <div class="floating-icon icon-1">{{ '{' }} {{ '}' }}</div>
+            <div class="floating-icon icon-2">&lt;/&gt;</div>
+            <div class="floating-icon icon-3">[ ]</div>
+            <div class="floating-icon icon-4">( )</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="competences-header">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <span class="title-gradient">Mes Compétences</span>
+                </h1>
+                <p class="subtitle">
+                    Découvrez les 6 compétences du BUT Informatique que j'ai développées au cours de ma formation.
+                    Chaque compétence reflète un domaine d'expertise spécifique du développement informatique.
+                </p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Compétences BUT</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">{{ getTotalSections() }}</div>
+                    <div class="stat-label">Sous-compétences</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Années d'études</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="tab-container">
+            <div class="tab-wrapper">
+                <ul class="tab-list" role="tablist">
+                    <li *ngFor="let tab of competences; let i = index" role="presentation">
+                        <button class="tab-button" [class.active]="tab === activeTab" (click)="onTabClick(tab)"
+                            [attr.aria-selected]="tab === activeTab" role="tab">
+                            <div class="tab-icon">
+                                <span class="tab-number">{{ i + 1 }}</span>
+                            </div>
+                            <div class="tab-content">
+                                <span class="tab-name">{{ tab.name }}</span>
+                                <span class="tab-title">{{ tab.title }}</span>
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <app-competence [activeTab]="activeTab"></app-competence>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="languages-section">
+            <app-languages></app-languages>
+        </div>
+    </div>
+</section>
