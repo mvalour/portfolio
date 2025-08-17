@@ -1,11 +1,129 @@
-<header class="header">
+<header class="header" [class.scrolled]="isScrolled">
+    <!-- Animated background gradient -->
+    <div class="header-bg"></div>
+
+    <!-- Glass overlay -->
+    <div class="glass-overlay"></div>
+
     <nav class="nav">
-        <span class="logo">Mathis Valour</span>
+        <!-- Logo with gradient text -->
+        <div class="logo-container">
+            <span class="logo">
+                <span class="logo-gradient">Mathis</span>
+                <span class="logo-secondary">Valour</span>
+            </span>
+            <div class="logo-decoration"></div>
+        </div>
+
+        <!-- Desktop Navigation -->
         <ul class="nav-links">
-            <li><a routerLink="/projects" routerLinkActive="active-link">Mes projets</a></li>
-            <li><a routerLink="/competence" routerLinkActive="active-link">Mes compétences</a></li>
-            <li><a routerLink="/profile" routerLinkActive="active-link">Mon profil</a></li>
-            <li><a routerLink="/contact" routerLinkActive="active-link">Me contacter</a></li>
+            <li>
+                <a routerLink="/projects" routerLinkActive="active-link" (click)="closeMobileMenu()">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="nav-text">Projets</span>
+                    <div class="nav-underline"></div>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/competence" routerLinkActive="active-link" (click)="closeMobileMenu()">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="nav-text">Compétences</span>
+                    <div class="nav-underline"></div>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/profile" routerLinkActive="active-link" (click)="closeMobileMenu()">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span class="nav-text">Profil & Expériences</span>
+                    <div class="nav-underline"></div>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/contact" routerLinkActive="active-link" (click)="closeMobileMenu()">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span class="nav-text">Me contacter</span>
+                    <div class="nav-underline"></div>
+                </a>
+            </li>
         </ul>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()"
+            aria-label="Toggle mobile menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
     </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" [class.open]="isMobileMenuOpen">
+        <div class="mobile-nav-overlay" (click)="closeMobileMenu()"></div>
+        <ul class="mobile-nav-links">
+            <li>
+                <a routerLink="/projects" routerLinkActive="active-link" (click)="closeMobileMenu()">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="nav-text">Projets</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/competence" routerLinkActive="active-link" (click)="closeMobileMenu()">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="nav-text">Compétences</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/profile" routerLinkActive="active-link" (click)="closeMobileMenu()">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span class="nav-text">Profil & Expériences</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/contact" routerLinkActive="active-link" (click)="closeMobileMenu()">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span class="nav-text">Me contacter</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </header>
