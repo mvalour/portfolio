@@ -1,96 +1,330 @@
-.hidden-section {
-    position: relative;
-    margin-bottom: 20px;
-    padding-left: 30px; /* Espace pour le texte des paragraphes pairs */
-    padding-right: 30px; /* Espace pour le texte des paragraphes impairs */
-}
-
-.hidden-section::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 6px;
-    height: 6px;
-    background-color: #2d3748; /* Couleur de la décoration */
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-
-/* Décoration à gauche pour les paragraphes pairs */
-.hidden-section.align-left::before {
-    left: -5px;
-}
-
-/* Décoration à droite pour les paragraphes impairs */
-.hidden-section.align-right::before {
-    right: -5px;
-}
-
-/* Alignement du texte à gauche pour les paragraphes pairs */
-.hidden-section.align-left {
-    text-align: left;
-}
-
-/* Alignement du texte à droite pour les paragraphes impairs */
-.hidden-section.align-right {
-    text-align: right;
-}
-
-.container {
+.competence-detail {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 2rem;
 }
 
-.section-name {
+/* Header de la compétence */
+.competence-header {
     text-align: center;
-    color: #000000;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.competence-badge {
+    display: inline-block;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.badge-text {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.competence-title {
     font-size: 2rem;
-    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Sections Grid */
+.sections-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.section-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+}
+
+.section-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.section-card.reverse .card-header {
+    border-right: none;
+    border-left: 1px solid var(--border-subtle);
+}
+
+.section-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-colored);
+    border-color: var(--accent-color);
+}
+
+/* Card Header */
+.card-header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+    border-right: 1px solid var(--border-subtle);
+    background: linear-gradient(135deg, rgba(244, 114, 182, 0.05), transparent);
+    width: 20%;
+    min-width: 200px;
+}
+
+.step-indicator {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.section-card:hover .step-indicator {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(244, 114, 182, 0.4);
+}
+
+.step-number {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .section-title {
-    text-align: center;
-    color: #000000;
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.3;
 }
 
-.skill-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2d3748;
-    margin-bottom: 10px;
+/* Card Content */
+.card-content {
+    padding: 1.5rem 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
 }
 
-.skill-description {
-    font-size: 1rem;
-    color: #4a5568;
-    margin-bottom: 10px;
+.section-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
 }
 
-.learn-more-link {
+.card-footer {
+    margin-top: auto;
+}
+
+.section-link {
     display: inline-flex;
     align-items: center;
-    padding: 8px 16px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #2d3748;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background: var(--hover-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
-.learn-more-link:hover {
-    background-color: #edf2f7;
-    color: #1a202c;
+.section-link:hover {
+    background: var(--contrast-bg);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(244, 114, 182, 0.2);
 }
 
-.arrow-icon {
-    width: 12px;
-    height: 12px;
-    margin-left: 8px;
-    transform: rotate(180deg);
-    stroke: currentColor;
-    stroke-width: 2;
+.link-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.section-link:hover .link-icon {
+    transform: translate(3px, -3px);
+}
+
+/* Card decoration */
+.card-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent, rgba(244, 114, 182, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.section-card:hover .card-decoration {
+    opacity: 1;
+}
+
+/* No selection state */
+.no-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+}
+
+.no-selection-content {
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.no-selection-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+.no-selection-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.no-selection h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 1rem 0;
+}
+
+.no-selection p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .competence-detail {
+        padding: 1rem;
+    }
+
+    .section-card,
+    .section-card.reverse {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .card-header {
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid var(--border-subtle);
+        width: 100%;
+        min-width: auto;
+        padding: 1.5rem;
+    }
+
+    .card-content {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .step-indicator {
+        width: 60px;
+        height: 60px;
+    }
+
+    .step-number {
+        font-size: 1.5rem;
+    }
+
+    .competence-title {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .section-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-card {
+        border-radius: 20px;
+    }
+
+    .competence-title {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .section-description {
+        font-size: 0.9rem;
+    }
+
+    .section-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .card-header,
+    .card-content {
+        padding: 1.25rem;
+    }
+
+    .step-indicator {
+        width: 50px;
+        height: 50px;
+    }
+
+    .step-number {
+        font-size: 1.3rem;
+    }
 }
