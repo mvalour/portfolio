@@ -2,157 +2,157 @@
     {
         "name": "HTML",
         "type": "frontend",
-        "image": "../../../assets/img/languages/html.png",
+        "image": "assets/img/languages/html.png",
         "description": "Langage de balisage utilisé pour structurer le contenu web."
     },
     {
         "name": "CSS",
         "type": "frontend",
-        "image": "../../../assets/img/languages/css.png",
+        "image": "assets/img/languages/css.png",
         "description": "Langage de style utilisé pour la présentation des pages web."
     },
     {
         "name": "JavaScript",
         "type": "frontend",
-        "image": "../../../assets/img/languages/javascript.png",
+        "image": "assets/img/languages/javascript.png",
         "description": "Langage de programmation utilisé pour rendre les pages web interactives."
     },
     {
         "name": "TypeScript",
         "type": "frontend",
-        "image": "../../../assets/img/languages/typescript.png",
+        "image": "assets/img/languages/typescript.png",
         "description": "Surcouche de JavaScript avec typage statique pour un développement plus robuste."
     },
     {
         "name": "Angular",
         "type": "frontend",
-        "image": "../../../assets/img/languages/angular.png",
+        "image": "assets/img/languages/angular.png",
         "description": "Plateforme et framework de développement pour créer des applications web dynamiques."
     },
     {
         "name": "ReactJS",
         "type": "frontend",
-        "image": "../../../assets/img/languages/reactjs.png",
+        "image": "assets/img/languages/reactjs.png",
         "description": "Bibliothèque JavaScript pour construire des interfaces utilisateur composées de composants réutilisables."
     },
     {
         "name": "Vue.js",
         "type": "frontend",
-        "image": "../../../assets/img/languages/vuejs.png",
+        "image": "assets/img/languages/vuejs.png",
         "description": "Framework JavaScript progressif utilisé pour construire des interfaces utilisateur interactives."
     },
     {
         "name": "Bootstrap",
         "type": "frontend",
-        "image": "../../../assets/img/languages/bootstrap.png",
+        "image": "assets/img/languages/bootstrap.png",
         "description": "Framework CSS responsive pour développer rapidement des interfaces web modernes et mobiles."
     },
     {
         "name": "Tailwind CSS",
         "type": "frontend",
-        "image": "../../../assets/img/languages/tailwindcss.png",
+        "image": "assets/img/languages/tailwindcss.png",
         "description": "Cadre CSS utilitaire pour créer rapidement des interfaces utilisateur personnalisées."
     },
     {
         "name": "PHP",
         "type": "backend",
-        "image": "../../../assets/img/languages/php.png",
+        "image": "assets/img/languages/php.png",
         "description": "Langage de script principalement utilisé pour le développement web côté serveur."
     },
     {
         "name": "Symfony",
         "type": "backend",
-        "image": "../../../assets/img/languages/symfony.png",
+        "image": "assets/img/languages/symfony.png",
         "description": "Cadre PHP utilisé pour développer des applications web robustes et évolutives."
     },
     {
         "name": "Laravel",
         "type": "backend",
-        "image": "../../../assets/img/languages/laravel.png",
+        "image": "assets/img/languages/laravel.png",
         "description": "Framework PHP élégant avec une syntaxe expressive pour le développement web moderne."
     },
     {
         "name": "Java",
         "type": "backend",
-        "image": "../../../assets/img/languages/java.png",
+        "image": "assets/img/languages/java.png",
         "description": "Langage de programmation orienté objet utilisé pour développer divers types d'applications."
     },
     {
         "name": "Spring",
         "type": "backend",
-        "image": "../../../assets/img/languages/spring.png",
+        "image": "assets/img/languages/spring.png",
         "description": "Framework Java complet pour le développement d'applications d'entreprise robustes."
     },
     {
         "name": "Spring Boot",
         "type": "backend",
-        "image": "../../../assets/img/languages/springboot.png",
+        "image": "assets/img/languages/springboot.png",
         "description": "Extension de Spring qui simplifie la configuration et le déploiement d'applications Java."
     },
     {
         "name": "NodeJS",
         "type": "backend",
-        "image": "../../../assets/img/languages/nodeJS.png",
+        "image": "assets/img/languages/nodeJS.png",
         "description": "Plateforme permettant d'exécuter du code JavaScript côté serveur."
     },
     {
         "name": "NestJS",
         "type": "backend",
-        "image": "../../../assets/img/languages/nestJS.png",
+        "image": "assets/img/languages/nestJS.png",
         "description": "Cadre de développement pour construire des applications efficaces et évolutives sur Node.js."
     },
     {
         "name": "Python",
         "type": "backend",
-        "image": "../../../assets/img/languages/python.png",
+        "image": "assets/img/languages/python.png",
         "description": "Langage de programmation polyvalent utilisé pour le développement backend."
     },
     {
         "name": "C",
         "type": "backend",
-        "image": "../../../assets/img/languages/c.png",
+        "image": "assets/img/languages/c.png",
         "description": "Langage de programmation procédural utilisé pour le développement système et applicatif."
     },
     {
         "name": "SQL",
         "type": "database",
-        "image": "../../../assets/img/languages/sql.png",
+        "image": "assets/img/languages/sql.png",
         "description": "Langage de requête structuré utilisé pour gérer les bases de données relationnelles."
     },
     {
         "name": "MySQL",
         "type": "database",
-        "image": "../../../assets/img/languages/mysql.png",
+        "image": "assets/img/languages/mysql.png",
         "description": "Système de gestion de base de données relationnelles SQL populaire."
     },
     {
         "name": "MongoDB",
         "type": "database",
-        "image": "../../../assets/img/languages/mongodb.png",
+        "image": "assets/img/languages/mongodb.png",
         "description": "Système de gestion de base de données NoSQL orienté documents."
     },
     {
         "name": "NoSQL",
         "type": "database",
-        "image": "../../../assets/img/languages/nosql.png",
+        "image": "assets/img/languages/nosql.png",
         "description": "Approche de base de données non-relationnelle offrant flexibilité et scalabilité pour les données diverses."
     },
     {
         "name": "Prisma",
         "type": "database",
-        "image": "../../../assets/img/languages/prisma.png",
+        "image": "assets/img/languages/prisma.png",
         "description": "ORM moderne et type-safe pour Node.js et TypeScript avec génération automatique de client."
     },
     {
         "name": "Eloquent",
         "type": "database",
-        "image": "../../../assets/img/languages/eloquent.png",
+        "image": "assets/img/languages/eloquent.png",
         "description": "ORM intégré à Laravel offrant une interface élégante pour interagir avec les bases de données."
     },
     {
         "name": "Git",
         "type": "tool",
-        "image": "../../../assets/img/languages/git.png",
+        "image": "assets/img/languages/git.png",
         "description": "Système de contrôle de version distribué pour le suivi des modifications de code."
     },
     {
@@ -164,31 +164,31 @@
     {
         "name": "Docker",
         "type": "tool",
-        "image": "../../../assets/img/languages/docker.png",
+        "image": "assets/img/languages/docker.png",
         "description": "Plateforme de conteneurisation pour automatiser le déploiement d'applications."
     },
     {
         "name": "PhpMyAdmin",
         "type": "tool",
-        "image": "../../../assets/img/languages/phpmyadmin.png",
+        "image": "assets/img/languages/phpmyadmin.png",
         "description": "Interface web pour l'administration et la gestion des bases de données MySQL."
     },
     {
         "name": "Looping",
         "type": "tool",
-        "image": "../../../assets/img/languages/looping.png",
+        "image": "assets/img/languages/looping.png",
         "description": "Outil de modélisation de bases de données pour concevoir et documenter des structures de données."
     },
     {
         "name": "Méthode Agile",
         "type": "tool",
-        "image": "../../../assets/img/languages/agile.png",
+        "image": "assets/img/languages/agile.png",
         "description": "Méthodologie de gestion de projet itérative favorisant la collaboration et l'adaptabilité."
     },
     {
         "name": "Notion",
         "type": "tool",
-        "image": "../../../assets/img/languages/notion.png",
+        "image": "assets/img/languages/notion.png",
         "description": "Outil de productivité tout-en-un pour la documentation, gestion de projets et collaboration d'équipe."
     }
 ]
