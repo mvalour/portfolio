@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Stagiaire développeur Backend",
+    "company": "Lalchante Toulouse",
+    "dateRange": {
+      "start": "2 juin 2025",
+      "end": "6 septembre 2025"
+    },
+    "date": "2 juin 2025 - 6 septembre 2025",
+    "description": "Participation à l'évolution d'une application web dans un environnement professionnel. Approfondissement des méthodologies agiles et des outils de développement modernes.",
+    "type": "professional",
+    "location": "Toulouse, France (TT)",
+    "technologies": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "JavaScript",
+      "AlpineJS",
+      "Tailwind CSS",
+      "HTML/CSS",
+      "Git",
+      "Agile",
+      "Looping",
+      "Figma",
+      "Notion"
+    ],
+    "achievements": [
+      "Développement d'interfaces utilisateur modernes",
+      "Participation au cycle de développement complet",
+      "Apprentissage des bonnes pratiques en entreprise"
+    ]
+  },
+  {
+    "title": "Pôle Événementiel - Co-Vice-Président",
+    "company": "STUDENT CLUB - IUT Lyon 1",
+    "dateRange": {
+      "start": "Mai 2024",
+      "end": "Juin 2025"
+    },
+    "date": "Mai 2024 - Juin 2025",
+    "description": "Participation active à la vie associative du site de la Doua à Lyon 1. Organisation d'événements étudiants et animation de la communauté étudiante.",
+    "type": "association",
+    "location": "Villeurbanne, France",
+    "technologies": [
+      "Communication",
+      "Gestion de projet",
+      "Organisation",
+      "Animation"
+    ],
+    "achievements": [
+      "Organisation d'événements étudiants réussis",
+      "Développement des compétences en leadership",
+      "Renforcement des liens entre étudiants",
+      "Gestion d'équipe et coordination de projets"
+    ]
+  },
+  {
+    "title": "Stagiaire développeur FullStack",
+    "company": "GuardMe",
+    "dateRange": {
+      "start": "15 Avril 2024",
+      "end": "14 Juin 2024"
+    },
+    "date": "15 Avril - 14 Juin 2024",
+    "description": "Participation à la création de sites web et d'applications mobiles dans un environnement professionnel. Découverte des méthodologies agiles et des outils de développement modernes.",
+    "type": "professional",
+    "location": "EuraTechnologies Lille, France (TT)",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "NestJS",
+      "NodeJS",
+      "Tailwind CSS",
+      "HTML/CSS",
+      "Git"
+    ],
+    "achievements": [
+      "Développement d'interfaces utilisateur modernes",
+      "Participation au cycle de développement complet",
+      "Apprentissage des bonnes pratiques en entreprise"
+    ]
+  },
+  {
+    "title": "BUT Informatique - 3ème année",
+    "company": "IUT Lyon 1 - Site de la Doua",
+    "dateRange": {
+      "start": "Septembre 2022",
+      "end": "Juin 2025"
+    },
+    "date": "Septembre 2022 - Juin 2025",
+    "description": "Actuellement étudiant en 3ème année de BUT (Bachelor Universitaire de Technologie) en informatique. Formation complète en développement logiciel, bases de données, réseaux et gestion de projet.",
+    "type": "education",
+    "location": "Villeurbanne, France",
+    "technologies": [
+      "Java",
+      "Python",
+      "C",
+      "JavaScript",
+      "SQL",
+      "Docker",
+      "Web",
+      "Réseaux",
+      "UML",
+      "Git",
+      "Agile"
+    ],
+    "achievements": [
+      "Projets tutorés en équipe",
+      "Maîtrise de plusieurs langages de programmation",
+      "Formation aux méthodologies de développement",
+      "Stage en entreprise validé"
+    ]
+  },
+  {
+    "title": "Pôle Événementiel - Chargé de mission",
+    "company": "BDE Informatique - IUT Lyon 1",
+    "dateRange": {
+      "start": "Avril 2023",
+      "end": "Avril 2024"
+    },
+    "date": "Avril 2023 - Avril 2024",
+    "description": "Participation active à la vie associative des étudiants en informatique sur le site de la Doua à Lyon 1. Organisation d'événements étudiants et animation de la communauté étudiante.",
+    "type": "association",
+    "location": "Villeurbanne, France",
+    "technologies": [
+      "Communication",
+      "Gestion de projet",
+      "Organisation",
+      "Animation"
+    ],
+    "achievements": [
+      "Organisation d'événements étudiants réussis",
+      "Développement des compétences en leadership",
+      "Renforcement des liens entre étudiants",
+      "Gestion d'équipe et coordination de projets"
+    ]
+  },
+  {
+    "title": "Stagiaire en mairie",
+    "company": "Mairie de Châtillon-la-Palud",
+    "dateRange": {
+      "start": "Avril 2019",
+      "end": "Avril 2019"
+    },
+    "date": "Avril 2019",
+    "description": "Stage de découverte du monde professionnel. Gestion de la comptabilité, archivage de documents et gestion administrative. Première expérience en milieu professionnel.",
+    "type": "professional",
+    "location": "Châtillon-la-Palud, France",
+    "technologies": [
+      "Bureautique",
+      "Excel",
+      "Gestion administrative",
+      "Comptabilité"
+    ],
+    "achievements": [
+      "Découverte du fonctionnement d'une administration",
+      "Apprentissage de la rigueur administrative",
+      "Gestion de documents et archivage",
+      "Première expérience professionnelle"
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "title": "sRanDouzeMeister",
+    "image": "assets/img/projects/sRanDouzeMeister.png",
+    "description": "Site web personnel moderne avec design glassmorphism et animations avancées",
+    "technologies": [
+      "ReactJS",
+      "REST API",
+      "TypeScript",
+      "JavaScript",
+      "NestJS",
+      "Node.js",
+      "Dockerfile",
+      "CI/CD",
+      "CSS",
+      "SQL"
+    ],
+    "github": "https://github.com/mvalour/sRanDouzeMeister-backend",
+    "demo": "",
+    "status": "planned",
+    "year": "2024"
+  },
+  {
+    "title": "Portfolio",
+    "image": "assets/img/projects/portfolio.png",
+    "description": "Site web personnel moderne avec design glassmorphism et animations avancées",
+    "technologies": [
+      "AngularJS",
+      "TypeScript",
+      "CSS",
+      "Responsive Design"
+    ],
+    "github": "https://github.com/mvalour/portfolio",
+    "demo": "https://portfolio-iota-nine-95.vercel.app/profile",
+    "status": "in-progress",
+    "year": "2024"
+  },
+  {
+    "title": "Pari quantitatif",
+    "image": "assets/img/projects/pq.png",
+    "description": "Site de jeu de société en Angular avec système de paris et classements dynamiques",
+    "technologies": [
+      "AngularJS",
+      "TypeScript",
+      "CSS",
+      "MongoDB",
+      "Local Storage"
+    ],
+    "github": "https://github.com/mvalour/pari-quantitatif",
+    "demo": "",
+    "status": "in-progress",
+    "year": "2024"
+  }
+]
