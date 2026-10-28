@@ -1,0 +1,67 @@
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="panel card" appReveal>
+      <span class="panel-glow" aria-hidden="true"></span>
+
+      <div class="intro">
+        <p class="eyebrow">05 · Contact</p>
+        <h2 class="title" id="contact-title">Un poste, un projet, une question ?</h2>
+        <p class="lead">
+          Je suis disponible dès maintenant pour un poste de développeur web. Écrivez-moi, je réponds rapidement.
+        </p>
+
+        <div class="email-row">
+          <a class="btn btn-primary email" [href]="'mailto:' + profile.email">
+            <app-icon name="mail" />
+            {{ profile.email }}
+          </a>
+          <button type="button" class="icon-btn copy" (click)="copyEmail()" [attr.aria-label]="copied() ? 'Adresse copiée' : 'Copier l’adresse email'">
+            <app-icon [name]="copied() ? 'check' : 'copy'" />
+          </button>
+          <span class="sr-only" aria-live="polite">{{ copied() ? 'Adresse email copiée' : '' }}</span>
+        </div>
+      </div>
+
+      <ul class="channels">
+        <li>
+          <a [href]="profile.phoneHref">
+            <span class="channel-icon"><app-icon name="phone" /></span>
+            <span class="channel-text">
+              <span class="channel-label">Téléphone</span>
+              {{ profile.phone }}
+            </span>
+          </a>
+        </li>
+        <li>
+          <a [href]="profile.linkedin" target="_blank" rel="noopener">
+            <span class="channel-icon"><app-icon name="linkedin" /></span>
+            <span class="channel-text">
+              <span class="channel-label">LinkedIn</span>
+              Mathis Valour
+            </span>
+            <app-icon class="channel-arrow" name="external" />
+          </a>
+        </li>
+        <li>
+          <a [href]="profile.github" target="_blank" rel="noopener">
+            <span class="channel-icon"><app-icon name="github" /></span>
+            <span class="channel-text">
+              <span class="channel-label">GitHub</span>
+              mvalour
+            </span>
+            <app-icon class="channel-arrow" name="external" />
+          </a>
+        </li>
+        <li>
+          <div class="channel-static">
+            <span class="channel-icon"><app-icon name="pin" /></span>
+            <span class="channel-text">
+              <span class="channel-label">Localisation</span>
+              {{ profile.location }}
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

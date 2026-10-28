@@ -1,0 +1,66 @@
+<section class="section band" id="projets" aria-labelledby="projets-title">
+  <div class="container">
+    <header class="section-head" appReveal>
+      <p class="eyebrow">04 · Projets</p>
+      <h2 class="section-title" id="projets-title">Projets personnels</h2>
+      <p class="section-lead">Conçus, développés et mis en ligne de A à Z, en mêlant code et musique.</p>
+    </header>
+
+    <div class="list">
+      @for (project of projects; track project.name; let odd = $odd) {
+        <article
+          class="project card"
+          [class.flip]="odd"
+          appReveal
+          [style.--p-bg]="project.theme.bg"
+          [style.--p-accent]="project.theme.accent"
+          [style.--p-accent-alt]="project.theme.accentAlt"
+        >
+          <a class="visual" [href]="project.links[0].url" target="_blank" rel="noopener" [attr.aria-label]="'Ouvrir ' + project.name">
+            <span class="visual-glow" aria-hidden="true"></span>
+            <img [src]="project.logo" [alt]="'Logo ' + project.name" width="112" height="112" />
+            <span class="visual-url">
+              {{ project.links[0].label }}
+              <app-icon name="external" />
+            </span>
+          </a>
+
+          <div class="content">
+            <div class="head">
+              <h3 class="name">{{ project.name }}</h3>
+              <span class="year">{{ project.year }}</span>
+            </div>
+            <p class="tagline">{{ project.tagline }}</p>
+            <p class="description">{{ project.description }}</p>
+
+            <ul class="highlights">
+              @for (h of project.highlights; track h) {
+                <li>{{ h }}</li>
+              }
+            </ul>
+
+            <ul class="chip-list" aria-label="Technologies">
+              @for (tech of project.stack; track tech) {
+                <li class="chip">{{ tech }}</li>
+              }
+            </ul>
+
+            <div class="links">
+              @for (link of project.links; track link.url; let first = $first) {
+                <a class="btn" [class.btn-primary]="first" [href]="link.url" target="_blank" rel="noopener">
+                  <app-icon [name]="first ? 'external' : 'github'" />
+                  {{ first ? 'Voir le site' : link.label }}
+                </a>
+              }
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+
+    <p class="more" appReveal>
+      Le reste de mon code est sur
+      <a [href]="github" target="_blank" rel="noopener">GitHub <app-icon name="arrow-right" /></a>
+    </p>
+  </div>
+</section>

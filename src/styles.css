@@ -1,179 +1,363 @@
-/* Reset et layout global */
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
+/* ---------- Thème ---------- */
 
-app-root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-router-outlet+* {
-    flex: 1;
-}
-
-/* Espacement pour le contenu principal */
-main,
-.container,
-.main-content {
-    flex: 1;
-    padding-top: 100px;
-    /* Hauteur du header fixe */
-    padding-bottom: 2rem;
-}
-
-/* Variables CSS avec palette harmonisée footer/header */
 :root {
-    /* Couleurs principales harmonisées */
-    --primary-gradient: linear-gradient(135deg, #334155 0%, #475569 50%, #64748B 100%);
-    --secondary-gradient: linear-gradient(135deg, #F472B6 0%, #A855F7 100%);
+  color-scheme: dark;
+  --bg: #0c0e13;
+  --bg-raised: #12151c;
+  --surface: #161a22;
+  --surface-hover: #1b2029;
+  --border: #242a35;
+  --border-strong: #323a48;
+  --text: #f2f3f7;
+  --text-muted: #a2a9b8;
+  --text-faint: #6f7686;
+  --accent: #8b9cff;
+  --accent-strong: #a9b5ff;
+  --accent-soft: rgb(139 156 255 / 0.12);
+  --accent-contrast: #0c0e13;
+  --success: #5ad19a;
+  --glow: rgb(139 156 255 / 0.18);
+  --header-bg: rgb(12 14 19 / 0.72);
+  --shadow: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 20px 40px -24px rgb(0 0 0 / 0.6);
+  /* Logos de marque noirs : inversés en thème sombre pour rester lisibles. */
+  --logo-invert: 1;
 
-    /* Couleurs d'accent */
-    --accent-color: #F472B6;
-    --accent-hover: #EC4899;
-    --accent-secondary: #A855F7;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', var(--font-sans);
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;
 
-    /* Palette de gris slate */
-    --slate-900: #0F172A;
-    --slate-800: #1E293B;
-    --slate-700: #334155;
-    --slate-600: #475569;
-    --slate-500: #64748B;
-    --slate-400: #94A3B8;
-    --slate-300: #CBD5E1;
-    --slate-200: #E2E8F0;
-    --slate-100: #F1F5F9;
-    --slate-50: #F8FAFC;
-
-    /* Effets de verre */
-    --glass-bg: rgba(51, 65, 85, 0.2);
-    --glass-border: rgba(244, 114, 182, 0.3);
-
-    /* Couleurs de texte */
-    --text-primary: #F8FAFC;
-    --text-secondary: #E2E8F0;
-    --text-muted: #94A3B8;
-    --text-dark: #334155;
-
-    /* Ombres */
-    --shadow-light: 0 8px 32px rgba(51, 65, 85, 0.15);
-    --shadow-dark: 0 4px 15px rgba(0, 0, 0, 0.25);
-    --shadow-colored: 0 8px 25px rgba(244, 114, 182, 0.2);
-
-    /* États interactifs */
-    --contrast-bg: rgba(244, 114, 182, 0.15);
-    --hover-bg: rgba(255, 255, 255, 0.1);
-    --focus-outline: 3px solid #F472B6;
-
-    /* Bordures */
-    --border-subtle: rgba(255, 255, 255, 0.1);
-    --border-accent: rgba(244, 114, 182, 0.3);
-
-    /* Background patterns */
-    --pattern-opacity: 0.08;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --container: 1120px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --header-h: 64px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Classes utilitaires globales */
-.text-gradient {
-    background: linear-gradient(135deg, var(--text-primary), var(--text-secondary), var(--accent-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Thème clair : choisi via le bouton, ou suivi du système si rien n'est choisi. */
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #e4e5e9;
+  --bg-raised: #dbdce1;
+  --surface: #eff0f3;
+  --surface-hover: #f4f5f7;
+  --border: #c8cbd2;
+  --border-strong: #b1b5be;
+  --text: #111318;
+  --text-muted: #424752;
+  --text-faint: #646a76;
+  --accent: #3f4fc4;
+  --accent-strong: #3242ad;
+  --accent-soft: rgb(63 79 196 / 0.12);
+  --accent-contrast: #ffffff;
+  --success: #18865a;
+  --glow: rgb(63 79 196 / 0.16);
+  --header-bg: rgb(228 229 233 / 0.82);
+  --shadow: 0 1px 2px rgb(17 19 24 / 0.06), 0 16px 32px -24px rgb(17 19 24 / 0.35);
+  --logo-invert: 0;
 }
 
-.glass-effect {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    color-scheme: light;
+    --bg: #e4e5e9;
+    --bg-raised: #dbdce1;
+    --surface: #eff0f3;
+    --surface-hover: #f4f5f7;
+    --border: #c8cbd2;
+    --border-strong: #b1b5be;
+    --text: #111318;
+    --text-muted: #424752;
+    --text-faint: #646a76;
+    --accent: #3f4fc4;
+    --accent-strong: #3242ad;
+    --accent-soft: rgb(63 79 196 / 0.12);
+    --accent-contrast: #ffffff;
+    --success: #18865a;
+    --glow: rgb(63 79 196 / 0.16);
+    --header-bg: rgb(228 229 233 / 0.82);
+    --shadow: 0 1px 2px rgb(17 19 24 / 0.06), 0 16px 32px -24px rgb(17 19 24 / 0.35);
+    --logo-invert: 0;
+  }
 }
 
-.shadow-soft {
-    box-shadow: var(--shadow-light);
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.shadow-colored {
-    box-shadow: var(--shadow-colored);
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+  -webkit-text-size-adjust: 100%;
 }
 
-/* Scrollbar personnalisée */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--slate-700);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-hover);
-}
-
-/* Focus visible global pour l'accessibilité */
-*:focus-visible {
-    outline: var(--focus-outline);
-    outline-offset: 2px;
-}
-
-/* Sélection de texte personnalisée */
-::selection {
-    background: var(--accent-color);
-    color: white;
-}
-
-::-moz-selection {
-    background: var(--accent-color);
-    color: white;
-}
-
-/* Transitions globales */
-* {
-    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
-}
-
-/* Mode sombre par défaut */
 body {
-    background: var(--slate-900);
-    color: var(--text-primary);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
-/* Support pour prefers-reduced-motion */
+body.no-scroll {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+/* ---------- Mise en page ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(4.5rem, 10vw, 7.5rem);
+}
+
+/* Section sur fond légèrement contrasté, pour rythmer la page. */
+.band {
+  background: var(--bg-raised);
+  border-block: 1px solid var(--border);
+}
+
+.section-head {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: clamp(2.25rem, 5vw, 3.5rem);
+  max-width: 640px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 4.5vw, 2.75rem);
+}
+
+.section-lead {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* ---------- Composants partagés ---------- */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 46px;
+  padding: 0.7rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.2s var(--ease);
+}
+
+.btn:hover {
+  border-color: var(--text-faint);
+  background: var(--surface-hover);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.btn-primary:hover {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+}
+
+.btn app-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background-color 0.2s;
+}
+
+.icon-btn:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.icon-btn app-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Apparition au défilement (directive appReveal) ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s var(--ease),
+    transform 0.7s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
 
-/* Support pour le contraste élevé */
-@media (prefers-contrast: high) {
-    :root {
-        --glass-bg: rgba(255, 255, 255, 0.3);
-        --glass-border: rgba(255, 255, 255, 0.5);
-        --text-primary: #FFFFFF;
-        --text-secondary: #F0F0F0;
-        --accent-color: #FF69B4;
-        --border-subtle: rgba(255, 255, 255, 0.3);
-    }
-
-    .glass-effect {
-        border: 2px solid var(--glass-border);
-        background: rgba(0, 0, 0, 0.4);
-    }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }

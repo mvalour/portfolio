@@ -1,0 +1,63 @@
+<section class="section" id="competences" aria-labelledby="competences-title">
+  <div class="container">
+    <header class="section-head" appReveal>
+      <p class="eyebrow">03 · Compétences</p>
+      <h2 class="section-title" id="competences-title">Technologies et outils</h2>
+      <p class="section-lead">Du front au back, en passant par la base de données et le déploiement, et où je les ai utilisés.</p>
+    </header>
+
+    <div class="filters" role="group" aria-label="Filtrer les compétences" appReveal>
+      @for (f of filters; track f.id) {
+        <button type="button" class="filter" [class.active]="filter() === f.id" [attr.aria-pressed]="filter() === f.id" (click)="filter.set(f.id)">
+          {{ f.label }}
+          <span class="count">{{ f.count }}</span>
+        </button>
+      }
+    </div>
+
+    <ul class="grid" aria-live="polite">
+      @for (skill of visible(); track skill.name; let i = $index) {
+        <li class="skill card" [style.--d.ms]="i * 25">
+          <span class="logo" [class.logo-dark]="skill.dark">
+            @if (skill.logo) {
+              <img [src]="'img/tech/' + skill.logo + '.svg'" alt="" width="30" height="30" />
+            } @else {
+              <app-icon [name]="categoryIcon(skill.category)" />
+            }
+          </span>
+          <div class="info">
+            <div class="info-head">
+              <h3 class="name">{{ skill.name }}</h3>
+              @if (filter() === 'all') {
+                <span class="badge">{{ categoryLabel(skill.category) }}</span>
+              }
+            </div>
+            <p class="description">{{ skill.description }}</p>
+          </div>
+        </li>
+      }
+    </ul>
+
+    <article class="languages card" appReveal>
+      <h3 class="languages-title">
+        <span class="languages-icon"><app-icon name="globe" /></span>
+        Langues
+      </h3>
+      <ul class="languages-list">
+        @for (lang of languages; track lang.name) {
+          <li>
+            <div class="lang-row">
+              <span>{{ lang.name }}</span>
+              <span class="lang-level">{{ lang.level }}</span>
+            </div>
+            <div class="meter" role="meter" [attr.aria-valuenow]="lang.score" aria-valuemin="0" aria-valuemax="5" [attr.aria-label]="lang.name + ' : ' + lang.level">
+              @for (n of levels; track n) {
+                <span [class.on]="n <= lang.score"></span>
+              }
+            </div>
+          </li>
+        }
+      </ul>
+    </article>
+  </div>
+</section>

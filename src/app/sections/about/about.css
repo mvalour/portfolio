@@ -1,0 +1,106 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.text {
+  display: grid;
+  gap: 1.25rem;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.text p:first-child {
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.side {
+  display: grid;
+  gap: 1rem;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.fact {
+  display: grid;
+  align-content: start;
+  gap: 0.35rem;
+  padding: 1.1rem 1rem;
+}
+
+.fact-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.fact-label {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.hobbies {
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+
+.hobbies-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.hobbies-title app-icon {
+  color: var(--accent);
+  width: 18px;
+  height: 18px;
+}
+
+.hobbies li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.hobbies li:first-child {
+  border-top: 0;
+}
+
+.hobby-detail {
+  color: var(--text-faint);
+  text-align: right;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .fact {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+}

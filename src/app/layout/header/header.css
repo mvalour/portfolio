@@ -1,0 +1,177 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+}
+
+/* Fond flouté sur un pseudo-élément : un backdrop-filter sur .header
+   enfermerait le menu mobile (position: fixed) dans sa hauteur. */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
+.header.scrolled::before {
+  background: var(--header-bg);
+  border-bottom-color: var(--border);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: var(--header-h);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 0.85rem;
+  letter-spacing: -0.03em;
+}
+
+.nav-list {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  position: relative;
+  display: block;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.nav-link.active {
+  color: var(--text);
+  background: var(--accent-soft);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta {
+  min-height: 40px;
+  padding-block: 0.5rem;
+}
+
+.burger {
+  display: none;
+}
+
+/* Menu mobile */
+.mobile-menu {
+  position: fixed;
+  inset: var(--header-h) 0 0;
+  background: var(--bg);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s,
+    visibility 0.25s;
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu nav {
+  padding-block: 1.5rem 2.5rem;
+}
+
+.mobile-menu li {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.35s var(--ease),
+    transform 0.35s var(--ease);
+  transition-delay: calc(var(--i) * 40ms);
+}
+
+.mobile-menu.open li {
+  opacity: 1;
+  transform: none;
+}
+
+.mobile-menu li a {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.mobile-menu li a.active {
+  color: var(--accent);
+}
+
+.mobile-index {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-faint);
+}
+
+.mobile-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 860px) {
+  .nav,
+  .cta {
+    display: none;
+  }
+
+  .burger {
+    display: inline-grid;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-name {
+    display: none;
+  }
+}

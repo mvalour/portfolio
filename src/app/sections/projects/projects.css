@@ -1,0 +1,199 @@
+.list {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.project.flip .visual {
+  order: 2;
+}
+
+/* Visuel : couleurs et logo du projet */
+.visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  background: var(--p-bg);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px) 0 0 / 28px 28px;
+}
+
+.visual-glow {
+  position: absolute;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--p-accent) 38%, transparent), transparent 65%);
+  z-index: -1;
+  transition: transform 0.6s var(--ease);
+}
+
+.visual img {
+  width: 112px;
+  height: 112px;
+  border-radius: 26px;
+  box-shadow: 0 24px 48px -16px rgb(0 0 0 / 0.6), 0 0 0 1px rgb(255 255 255 / 0.08);
+  transition: transform 0.6s var(--ease);
+}
+
+.visual:hover img {
+  transform: translateY(-4px) scale(1.04);
+}
+
+.visual:hover .visual-glow {
+  transform: scale(1.15);
+}
+
+.visual-url {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.35);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  color: rgb(255 255 255 / 0.85);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  backdrop-filter: blur(6px);
+}
+
+.visual-url app-icon {
+  width: 13px;
+  height: 13px;
+}
+
+/* Contenu */
+.content {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.name {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+.year {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+
+.tagline {
+  margin-top: -0.6rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.description {
+  color: var(--text-muted);
+}
+
+.highlights {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.93rem;
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--p-accent);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.links .btn {
+  min-height: 42px;
+  padding: 0.55rem 1.05rem;
+  font-size: 0.9rem;
+}
+
+.more {
+  margin-top: 2.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-strong);
+  transition: border-color 0.2s;
+}
+
+.more a:hover {
+  border-color: var(--accent);
+}
+
+.more app-icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 860px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .project.flip .visual {
+    order: 0;
+  }
+
+  .visual {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .links .btn {
+    flex: 1 1 auto;
+  }
+}

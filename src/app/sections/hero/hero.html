@@ -1,0 +1,63 @@
+<section class="hero" id="top">
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <div class="container hero-grid">
+    <div class="intro">
+      <p class="status">
+        <span class="status-dot" aria-hidden="true"></span>
+        {{ profile.status }}
+      </p>
+
+      <h1 class="title">
+        {{ profile.firstName }} <span class="title-last">{{ profile.lastName }}</span>
+      </h1>
+      <p class="role">{{ profile.role }}</p>
+      <p class="pitch">{{ profile.pitch }}</p>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="#projets">
+          Voir mes projets
+          <app-icon name="arrow-right" />
+        </a>
+        <a class="btn" href="#contact">Me contacter</a>
+      </div>
+
+      <ul class="meta">
+        <li>
+          <app-icon name="pin" />
+          {{ profile.location }}
+        </li>
+        <li>
+          <a [href]="profile.github" target="_blank" rel="noopener">
+            <app-icon name="github" />
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a [href]="profile.linkedin" target="_blank" rel="noopener">
+            <app-icon name="linkedin" />
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <figure class="code-card card" aria-label="Résumé du profil sous forme de code">
+      <div class="code-top" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <p>mathis.ts</p>
+      </div>
+      <pre class="code"><code><span class="k">const</span> <span class="v">mathis</span> = &#123;
+  role: <span class="s">'Développeur full-stack'</span>,
+  diplome: <span class="s">'BUT Informatique'</span>,
+  front: [@for (s of front; track s) {<span class="s">'{{ s }}'</span>@if (!$last) {, }}],
+  back: [@for (s of back; track s) {<span class="s">'{{ s }}'</span>@if (!$last) {, }}],
+  disponible: <span class="b">true</span>,
+&#125;;</code></pre>
+    </figure>
+  </div>
+
+  <a class="scroll-hint" href="#profil" aria-label="Aller à la section Profil">
+    <span></span>
+  </a>
+</section>

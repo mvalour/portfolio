@@ -1,0 +1,42 @@
+<section class="section" id="profil" aria-labelledby="profil-title">
+  <div class="container">
+    <header class="section-head" appReveal>
+      <p class="eyebrow">01 · Profil</p>
+      <h2 class="section-title" id="profil-title">Du code propre, des projets qui vont jusqu’au bout.</h2>
+    </header>
+
+    <div class="layout">
+      <div class="text" appReveal>
+        @for (paragraph of profile.about; track $index) {
+          <p>{{ paragraph }}</p>
+        }
+      </div>
+
+      <aside class="side">
+        <ul class="facts">
+          @for (fact of facts; track fact.label; let i = $index) {
+            <li class="fact card" appReveal [revealDelay]="i * 80">
+              <span class="fact-value">{{ fact.value }}</span>
+              <span class="fact-label">{{ fact.label }}</span>
+            </li>
+          }
+        </ul>
+
+        <div class="hobbies card" appReveal [revealDelay]="240">
+          <h3 class="hobbies-title">
+            <app-icon name="music" />
+            En dehors du code
+          </h3>
+          <ul>
+            @for (hobby of hobbies; track hobby.label) {
+              <li>
+                <span>{{ hobby.label }}</span>
+                <span class="hobby-detail">{{ hobby.detail }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

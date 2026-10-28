@@ -1,0 +1,73 @@
+<header class="header" [class.scrolled]="scrolled() || menuOpen()">
+  <div class="container bar">
+    <a class="brand" href="#top" (click)="closeMenu()" aria-label="Retour en haut de la page">
+      <span class="brand-mark" aria-hidden="true">MV</span>
+      <span class="brand-name">{{ profile.firstName }} {{ profile.lastName }}</span>
+    </a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <ul class="nav-list">
+        @for (section of sections; track section.id) {
+          <li>
+            <a
+              class="nav-link"
+              [href]="'#' + section.id"
+              [class.active]="spy.active() === section.id"
+              [attr.aria-current]="spy.active() === section.id ? 'true' : null"
+            >
+              {{ section.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <button
+        type="button"
+        class="icon-btn"
+        (click)="theme.toggle()"
+        [attr.aria-label]="theme.theme() === 'dark' ? 'Passer au thème clair' : 'Passer au thème sombre'"
+      >
+        <app-icon [name]="theme.theme() === 'dark' ? 'sun' : 'moon'" />
+      </button>
+      <a class="btn btn-primary cta" href="#contact">Me contacter</a>
+      <button
+        type="button"
+        class="icon-btn burger"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="mobile-menu"
+        [attr.aria-label]="menuOpen() ? 'Fermer le menu' : 'Ouvrir le menu'"
+      >
+        <app-icon [name]="menuOpen() ? 'close' : 'menu'" />
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu" [class.open]="menuOpen()" [attr.inert]="menuOpen() ? null : ''">
+    <nav class="container" aria-label="Navigation mobile">
+      <ul>
+        @for (section of sections; track section.id; let i = $index) {
+          <li [style.--i]="i">
+            <a [href]="'#' + section.id" (click)="closeMenu()" [class.active]="spy.active() === section.id">
+              <span class="mobile-index">0{{ i + 1 }}</span>
+              {{ section.label }}
+            </a>
+          </li>
+        }
+      </ul>
+      <div class="mobile-links">
+        <a class="icon-btn" [href]="profile.github" target="_blank" rel="noopener" aria-label="GitHub">
+          <app-icon name="github" />
+        </a>
+        <a class="icon-btn" [href]="profile.linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <app-icon name="linkedin" />
+        </a>
+        <a class="icon-btn" [href]="'mailto:' + profile.email" aria-label="Email">
+          <app-icon name="mail" />
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>

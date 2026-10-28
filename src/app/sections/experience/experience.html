@@ -1,0 +1,49 @@
+<section class="section band" id="parcours" aria-labelledby="parcours-title">
+  <div class="container">
+    <header class="section-head" appReveal>
+      <p class="eyebrow">02 · Parcours</p>
+      <h2 class="section-title" id="parcours-title">Expériences et formation</h2>
+      <p class="section-lead">Deux stages de développement, un engagement associatif de deux ans et un BUT Informatique.</p>
+    </header>
+
+    <div class="layout">
+      <ol class="timeline" aria-label="Expériences">
+        @for (exp of experiences; track exp.org + exp.period) {
+          <li class="item" appReveal>
+            <span class="dot" aria-hidden="true"></span>
+            <p class="period">{{ exp.period }}</p>
+            <div class="body">
+              <h3 class="role">{{ exp.role }}</h3>
+              <p class="org">
+                {{ exp.org }} <span class="place">· {{ exp.place }}</span>
+              </p>
+              <p class="summary">{{ exp.summary }}</p>
+              @if (exp.tags) {
+                <ul class="chip-list tags" aria-label="Technologies">
+                  @for (tag of exp.tags; track tag) {
+                    <li class="chip">{{ tag }}</li>
+                  }
+                </ul>
+              }
+            </div>
+          </li>
+        }
+      </ol>
+
+      <aside class="education" aria-labelledby="formation-title">
+        <h3 class="education-title" id="formation-title" appReveal>
+          <app-icon name="graduation" />
+          Formation
+        </h3>
+        @for (edu of education; track edu.degree; let i = $index) {
+          <article class="edu card" appReveal [revealDelay]="i * 80">
+            <p class="period">{{ edu.period }}</p>
+            <h4 class="edu-degree">{{ edu.degree }}</h4>
+            <p class="edu-detail">{{ edu.detail }}</p>
+            <p class="edu-school">{{ edu.school }}</p>
+          </article>
+        }
+      </aside>
+    </div>
+  </div>
+</section>

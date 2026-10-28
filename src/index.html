@@ -1,14 +1,32 @@
 <!doctype html>
-<html lang="fr-FR">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Portfolio</title>
+  <title>Mathis Valour — Développeur web full-stack</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="@angular/material/prebuilt-themes/indigo-pink.css">
-  <script src="https://unpkg.com/@angular/material/prebuilt-themes/indigo-pink.js"></script>
+  <meta name="description" content="Portfolio de Mathis Valour, développeur web full-stack (Angular, React, NestJS, Laravel). Parcours, compétences et projets.">
+  <meta name="author" content="Mathis Valour">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mathis Valour — Développeur web full-stack">
+  <meta property="og:description" content="Parcours, compétences et projets d'un développeur web full-stack, diplômé d'un BUT Informatique.">
+  <meta property="og:url" content="https://mvalour.github.io/portfolio/">
+  <meta name="theme-color" content="#0c0e13" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#e4e5e9" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <!-- Applique le thème avant le premier rendu pour éviter un flash. -->
+  <script>
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset['theme'] = t;
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <app-root></app-root>
+  <noscript>Ce site a besoin de JavaScript. Contact : valour.math&#64;gmail.com</noscript>
 </body>
 </html>
